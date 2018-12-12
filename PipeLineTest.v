@@ -29,11 +29,6 @@ module PipeLineTest;
 
 	// Outputs
 	wire [31:0] instr;
-	wire [31:0] imm;
-	wire [31:0] val_rs;
-	wire [31:0] val_rt;
-	wire [31:0] alu_res;
-	wire [31:0] mem_data;
 	wire [31:0] wb_data;
 	wire [4:0] rwd;
 	wire [31:0] pc;
@@ -43,11 +38,6 @@ module PipeLineTest;
 		.clk(clk), 
 		.pc(pc), 
 		.instr(instr), 
-		.imm(imm), 
-		.val_rs(val_rs), 
-		.val_rt(val_rt), 
-		.alu_res(alu_res), 
-		.mem_data(mem_data), 
 		.wb_data(wb_data), 
 		.rwd(rwd)
 	);
