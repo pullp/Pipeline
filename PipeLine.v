@@ -46,6 +46,9 @@ module PipeLine(
 //    );
      IF _if(.clk(clk), .instr_out(instr_ID), .pc_out(pc_ID));
 
+
+		wire[31:0] from_ex, from_mem;
+		wire[2:0] rs_fwd, rt_fwd;
 //module ID(
 //		input clk,
 //		input[31:0] instr_in,
@@ -56,11 +59,19 @@ module PipeLine(
 //		output reg [5:0] opcode_out,
 //		input[4:0] rwd_in,
 //		input[31:0] wb_data,
+//		output reg [2:0] rs_fwd,
+//		output reg [2:0] rt_fwd,
+//		input [31:0] from_ex_in,
+//		input [31:0] from_mem_in;
+//		output reg [31:0] from_ex_out,
+//		output reg [31:0] from_mem_out
 //    );
      ID _id(.clk(clk), .instr_in(instr_ID), .imm_out(imm_EX),
             .val_rs_out(rs_EX), .val_rt_out(rt_EX), .rwd_out(rwd_EX), .opcode_out(opcode_EX),
-            .rwd_in(rwd_BACK), .wb_data(wbdata_BACK));
-
+            .rwd_in(rwd_BACK), .wb_data(wbdata_BACK), 
+				.from_ex_in(fwd_ex2ex), .from_mem_in(fwd_mem2ex),
+				.from_ex_out(from_ex), .from_mem_out(from_mem),
+				.rs_fwd(rs_fwd), .rt_fwd(rt_fwd));
 
 //module EX(
 //		input clk,
@@ -73,11 +84,16 @@ module PipeLine(
 //		input[5:0] opcode_in,
 //		output reg [5:0] opcode_out,
 //		output reg [31:0] alu_res_out,
+//		input [2:0] rs_fwd,
+//		input [2:0] rt_fwd,
+//		input [31:0] alu_out_from_mem,
+//		input [31:0] mem_data_from_mem
 //    );
-     EX _ex(.clk(clk), .imm_in(imm_EX),
-            .val_rs_in(rs_EX), .val_rt_in(rt_EX),
+     EX _ex(.clk(clk), .imm_in(imm_EX),.val_rs_in(rs_EX), .val_rt_in(rt_EX),
             .val_rt_out(rt_MEM), .rwd_in(rwd_EX), .rwd_out(rwd_MEM), .opcode_in(opcode_EX),
-            .opcode_out(opcode_MEM), .alu_res_out(alures_MEM));
+            .opcode_out(opcode_MEM), .alu_res_out(alures_MEM),
+				.rs_fwd(rs_fwd), .rt_fwd(rt_fwd), .alu_out_from_mem(alures_WB),
+				.mem_data_from_mem(memdata_WB) );
 
 
 //module MEM(
