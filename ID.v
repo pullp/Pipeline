@@ -22,17 +22,26 @@
 module ID(
 		input clk,
 		input[31:0] instr_in,
-		output reg [31:0] instr_out,
 		output reg [31:0] imm_out,
 		output reg [31:0] val_rs_out,
 		output reg [31:0] val_rt_out, 
 		output reg [4:0] rwd_out,
 		output reg [5:0] opcode_out,
 		input[4:0] rwd_in,
-		input[31:0] wb_data,
-		input[31:0] pc_in,
-		output reg [31:0] pc_out
+		input[31:0] wb_data
     );
+//module EX(
+//		input clk,
+//		input[31:0] imm_in,
+//		input[31:0] val_rs_in,
+//		input[31:0] val_rt_in,
+//		output reg [31:0] val_rt_out,
+//		input[4:0] rwd_in,
+//		output reg [4:0] rwd_out,
+//		input[5:0] opcode_in,
+//		output reg [5:0] opcode_out,
+//		output reg [31:0] alu_res_out,
+//    );
 		wire [9:0] rs_rt_l;
 		wire [31:0] imm_l;
 		wire [31:0] val_rs_l;
@@ -51,6 +60,8 @@ module ID(
 								|| (instr_in[31:26] == `JUMP))
 								? 5'b0_0000 : instr_in[25:21];
 		assign opcode_l = instr_in[31:26];
+//		assign opcode_l = 6'b00_0000;
+//		assign opcode_l = 6'b11_1111;
 		
 //module RegFiles(
 //    input CLK,
@@ -65,8 +76,6 @@ module ID(
 		
 		always@(posedge clk)
 			begin
-			pc_out <= pc_in;
-			instr_out <= instr_in;
 			imm_out <= imm_l;
 			val_rs_out <= val_rs_l;
 			val_rt_out <= val_rt_l;
@@ -76,14 +85,11 @@ module ID(
 
 	initial
 		begin
-		instr_out=0;
-		instr_out=0;
 		imm_out=0;
 		val_rs_out=0;
 		val_rt_out=0;
 		rwd_out=0;
 		opcode_out=0;
-		pc_out=0;
 		end
 
 endmodule

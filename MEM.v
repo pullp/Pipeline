@@ -21,25 +21,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 module MEM(
 		input clk,
-		input[31:0] instr_in,
-		output reg [31:0] instr_out,
-		input[31:0] imm_in,
-		output reg [31:0] imm_out,
-		input[31:0] val_rs_in,
-		output reg [31:0] val_rs_out,
 		input[31:0] val_rt_in,
-		output reg [31:0] val_rt_out,
 		input[4:0] rwd_in,
 		output reg [4:0] rwd_out,
 		input[5:0] opcode_in,
 		output reg [5:0] opcode_out,
 		input[31:0] alu_res_in,
 		output reg [31:0] alu_res_out,
-		output reg [31:0] mem_data_out,
-		input[31:0] pc_in,
-		output reg [31:0] pc_out
+		output reg [31:0] mem_data_out
     );
 
+//module WB(
+//		input[4:0] rwd_in,
+//		output[4:0] rwd_out,
+//		input[5:0] opcode_in,
+//		input[31:0] alu_res_in,
+//		input[31:0] mem_data_in,
+//		output[31:0] wb_data
+//    );
 		wire [31:0] data_out_l;
 		
 //module DataMem(
@@ -53,11 +52,6 @@ module MEM(
 		
 		always@(posedge clk)
 			begin
-			pc_out <= pc_in;
-			instr_out <= instr_in;
-			imm_out <= imm_in;
-			val_rs_out <= val_rs_in;
-			val_rt_out <= val_rt_in;
 			rwd_out <= rwd_in;
 			opcode_out <= opcode_in;
 			alu_res_out <= alu_res_in;
@@ -66,15 +60,9 @@ module MEM(
 			
 		initial
 			begin
-			instr_out=0;
-			instr_out=0;
-			imm_out=0;
-			val_rs_out=0;
-			val_rt_out=0;
 			rwd_out=0;
 			opcode_out=0;
 			alu_res_out=0;
 			mem_data_out=0;
-			pc_out=0;
 			end
 endmodule

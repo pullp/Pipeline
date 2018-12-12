@@ -21,23 +21,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 module EX(
 		input clk,
-		input[31:0] instr_in,
-		output reg [31:0] instr_out,
 		input[31:0] imm_in,
-		output reg [31:0] imm_out,
 		input[31:0] val_rs_in,
-		output reg [31:0] val_rs_out,
 		input[31:0] val_rt_in,
 		output reg [31:0] val_rt_out,
 		input[4:0] rwd_in,
 		output reg [4:0] rwd_out,
 		input[5:0] opcode_in,
 		output reg [5:0] opcode_out,
-		output reg [31:0] alu_res_out,
-		input[31:0] pc_in,
-		output reg [31:0] pc_out
+		output reg [31:0] alu_res_out
     );
-	 
+//module MEM(
+//		input clk,
+//		input[31:0] val_rt_in,
+//		input[4:0] rwd_in,
+//		output reg [4:0] rwd_out,
+//		input[5:0] opcode_in,
+//		output reg [5:0] opcode_out,
+//		input[31:0] alu_res_in,
+//		output reg [31:0] alu_res_out,
+//		output reg [31:0] mem_data_out,
+//    );
 	 wire[31:0] imm_or_rt_l;
 	 wire[31:0] alu_res_l;
 	 assign imm_or_rt_l = ((opcode_in == `LDW)
@@ -55,10 +59,6 @@ module EX(
 	
 	 always@(posedge clk)
 		begin
-		pc_out <= pc_in;
-		instr_out <= instr_in;
-		imm_out <= imm_in;
-		val_rs_out <= val_rs_in;
 		val_rt_out <= val_rt_in;
 		rwd_out <= rwd_in;
 		opcode_out <= opcode_in;
@@ -67,15 +67,10 @@ module EX(
 		
 	initial
 		begin
-		instr_out=0;
-		instr_out=0;
-		imm_out=0;
-		val_rs_out=0;
 		val_rt_out=0;
 		rwd_out=0;
 		opcode_out=0;
 		alu_res_out=0;
-		pc_out=0;
 		end
 		
 endmodule

@@ -1,0 +1,6 @@
+#Clock pins
+
+NET "CLK" LOC="V10"   |   IOSTANDARD=LVCMOS33;
+
+Net CLK TNM_NET = sys_clk;
+TIMESPEC TS_Clk = PERIOD sys_clk 1000 kHz;
