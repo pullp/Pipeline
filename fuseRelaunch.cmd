@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/OneDrive - stu.hit.edu.cn/codes/verilog/PipeLine/PipeLineTest_isim_beh.exe" -prj "E:/OneDrive - stu.hit.edu.cn/codes/verilog/PipeLine/PipeLineTest_beh.prj" "work.PipeLineTest" "work.glbl" 
