@@ -83,6 +83,7 @@ module ID(
 		val_rt_out=0;
 		rwd_out=0;
 		opcode_out=0;
+		pc_out=0;
 		end
 
 endmodule

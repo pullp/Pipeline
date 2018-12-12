@@ -75,6 +75,7 @@ module EX(
 		rwd_out=0;
 		opcode_out=0;
 		alu_res_out=0;
+		pc_out=0;
 		end
 		
 endmodule

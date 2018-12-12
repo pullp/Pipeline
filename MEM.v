@@ -75,5 +75,6 @@ module MEM(
 			opcode_out=0;
 			alu_res_out=0;
 			mem_data_out=0;
+			pc_out=0;
 			end
 endmodule
