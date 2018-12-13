@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/OneDrive - stu.hit.edu.cn/codes/verilog/PipeLine/PipeLineTest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="PipeLineTest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="51" />
+   <wvobject fp_name="/PipeLineTest/instr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/wb_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/rwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/instr_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instr_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_in[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rwd_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd_in[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd_in[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/wb_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rs_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs_l[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_l[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rt_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rt_l[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rt_l[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/imm_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imm_l[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_l[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/val_rs_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">val_rs_l[31:0]</obj_property>
+      <obj_property name="ObjectShortName">val_rs_l[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/val_rt_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">val_rt_l[31:0]</obj_property>
+      <obj_property name="ObjectShortName">val_rt_l[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rwd_out_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd_out_l[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd_out_l[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/opcode_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode_l[5:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode_l[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rs_fwd_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs_fwd_l[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_fwd_l[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rt_fwd_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rt_fwd_l[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rt_fwd_l[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/imm_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imm_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_out[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/val_rs_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">val_rs_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">val_rs_out[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/val_rt_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">val_rt_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">val_rt_out[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rwd_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd_out[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd_out[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/opcode_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode_out[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rs_fwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs_fwd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_fwd[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/rt_fwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rt_fwd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rt_fwd[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/pprev_rwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pprev_rwd[5:0]</obj_property>
+      <obj_property name="ObjectShortName">pprev_rwd[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/_id/prev_rwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">prev_rwd[5:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_rwd[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/instr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/wb_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/instr_ID" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instr_ID[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_ID[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/imm_EX" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imm_EX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_EX[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rs_EX" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs_EX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_EX[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rt_EX" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rt_EX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rt_EX[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rt_MEM" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rt_MEM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rt_MEM[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/opcode_EX" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode_EX[5:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode_EX[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/opcode_MEM" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode_MEM[5:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode_MEM[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/opcode_WB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode_WB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode_WB[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rwd_EX" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd_EX[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd_EX[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rwd_MEM" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd_MEM[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd_MEM[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rwd_WB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd_WB[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd_WB[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rwd_BACK" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rwd_BACK[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rwd_BACK[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/alures_MEM" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alures_MEM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alures_MEM[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/alures_WB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alures_WB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alures_WB[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/memdata_WB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memdata_WB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">memdata_WB[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/wbdata_BACK" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wbdata_BACK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wbdata_BACK[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/pc_ID" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_ID[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_ID[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rs_fwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs_fwd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_fwd[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PipeLineTest/uut/rt_fwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rt_fwd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rt_fwd[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
