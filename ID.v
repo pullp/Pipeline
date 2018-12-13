@@ -31,10 +31,6 @@ module ID(
 		input[31:0] wb_data,
 		output reg [2:0] rs_fwd,
 		output reg [2:0] rt_fwd,
-		input [31:0] from_ex_in,
-		input [31:0] from_mem_in,
-		output reg [31:0] from_ex_out,
-		output reg [31:0] from_mem_out
     );
 //module EX(
 //		input clk,
@@ -47,6 +43,10 @@ module ID(
 //		input[5:0] opcode_in,
 //		output reg [5:0] opcode_out,
 //		output reg [31:0] alu_res_out,
+//		input [2:0] rs_fwd,
+//		input [2:0] rt_fwd,
+//		input [31:0] alu_out_from_mem,
+//		input [31:0] mem_data_from_mem
 //    );
 		wire [4:0] rs_l, rt_l;
 		wire [31:0] imm_l;
@@ -72,7 +72,7 @@ module ID(
 		assign opcode_l = instr_in[31:26];
 		
 		
-		//J-class instructions don't need forwarding
+		//J-class/I-class instructions don't need forwarding
 		//if prev rwd is R0, don't need forwarding
 		wire[2:0] rs_fwd_l, rt_fwd_l;
 		assign rs_fwd_l = ((instr_in[31:26] == `SDW)

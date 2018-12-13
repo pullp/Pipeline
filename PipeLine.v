@@ -47,7 +47,6 @@ module PipeLine(
      IF _if(.clk(clk), .instr_out(instr_ID), .pc_out(pc_ID));
 
 
-		wire[31:0] from_ex, from_mem;
 		wire[2:0] rs_fwd, rt_fwd;
 //module ID(
 //		input clk,
@@ -61,16 +60,10 @@ module PipeLine(
 //		input[31:0] wb_data,
 //		output reg [2:0] rs_fwd,
 //		output reg [2:0] rt_fwd,
-//		input [31:0] from_ex_in,
-//		input [31:0] from_mem_in;
-//		output reg [31:0] from_ex_out,
-//		output reg [31:0] from_mem_out
 //    );
      ID _id(.clk(clk), .instr_in(instr_ID), .imm_out(imm_EX),
             .val_rs_out(rs_EX), .val_rt_out(rt_EX), .rwd_out(rwd_EX), .opcode_out(opcode_EX),
-            .rwd_in(rwd_BACK), .wb_data(wbdata_BACK), 
-				.from_ex_in(fwd_ex2ex), .from_mem_in(fwd_mem2ex),
-				.from_ex_out(from_ex), .from_mem_out(from_mem),
+            .rwd_in(rwd_BACK), .wb_data(wbdata_BACK),
 				.rs_fwd(rs_fwd), .rt_fwd(rt_fwd));
 
 //module EX(
