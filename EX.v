@@ -33,7 +33,9 @@ module EX(
 		input [2:0] rs_fwd,
 		input [2:0] rt_fwd,
 		input [31:0] alu_out_from_mem,
-		input [31:0] mem_data_from_mem
+		input [31:0] mem_data_from_mem,
+		input [2:0] ld_rs_fwd,
+		input [2:0] ld_rt_fwd
     );
 //module MEM(
 //		input clk,
@@ -56,12 +58,14 @@ module EX(
 	 wire[31:0] alu_b;
 	 
 	 //this time previous instr's alu_out is stored in alu_res_out.
-	 assign alu_a = (rs_fwd==0)?val_rs_in:
-						(rs_fwd==1)?alu_res_out:
-						alu_out_from_mem;
-	assign alu_b = (rt_fwd==0)?imm_or_rt_l:
-						(rt_fwd==1)?alu_res_out:
-						alu_out_from_mem;
+	 assign alu_a = (rs_fwd==1)?alu_res_out:
+					 	 (rs_fwd==2)?alu_out_from_mem:
+					 	 (ld_rs_fwd==2)?mem_data_from_mem:
+						 val_rs_in;
+	assign alu_b = (rt_fwd==1)?alu_res_out:
+						(rt_fwd==2)?alu_out_from_mem:
+						(ld_rt_fwd==2)?mem_data_from_mem:
+						imm_or_rt_l;
 //	module Alu(
 //    input [31:0] a, //rs
 //    input [31:0] b, //imm or rt

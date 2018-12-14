@@ -40,14 +40,19 @@ module PipeLine(
 	assign wb_data = wbdata_BACK;
 	assign rwd = rwd_BACK;
 	assign pc = pc_ID;
+	
+	
+	wire[2:0] rs_fwd, rt_fwd, ld_rs_ID, ld_rt_ID,ld_rs_EX, ld_rt_EX ;
 //module IF(
-//  input clk,
-//  output[31:0] instr_out
+//	input clk,
+//	output [31:0] instr_out,
+//	output reg [31:0] pc_out,
+//	output reg [2:0] ld_rs,
+//	output reg [2:0] ld_rt
 //    );
-     IF _if(.clk(clk), .instr_out(instr_ID), .pc_out(pc_ID));
+     IF _if(.clk(clk), .instr_out(instr_ID), .pc_out(pc_ID), .ld_rs(ld_rs_ID), .ld_rt(ld_rt_ID));
 
 
-		wire[2:0] rs_fwd, rt_fwd;
 //module ID(
 //		input clk,
 //		input[31:0] instr_in,
@@ -60,11 +65,19 @@ module PipeLine(
 //		input[31:0] wb_data,
 //		output reg [2:0] rs_fwd,
 //		output reg [2:0] rt_fwd,
+////		output reg stall,
+//		output stall,
+//		input [2:0] ld_rs_in,
+//		input [2:0] ld_rt_in,
+//		output reg [2:0] ld_rs_out,
+//		output reg [2:0] ld_rt_out
 //    );
+
      ID _id(.clk(clk), .instr_in(instr_ID), .imm_out(imm_EX),
             .val_rs_out(rs_EX), .val_rt_out(rt_EX), .rwd_out(rwd_EX), .opcode_out(opcode_EX),
             .rwd_in(rwd_BACK), .wb_data(wbdata_BACK),
-				.rs_fwd(rs_fwd), .rt_fwd(rt_fwd));
+				.rs_fwd(rs_fwd), .rt_fwd(rt_fwd),
+				.ld_rs_in(ld_rs_ID), .ld_rt_in(ld_rt_ID), .ld_rs_out(ld_rs_EX), .ld_rt_out(ld_rt_EX));
 
 //module EX(
 //		input clk,
@@ -80,13 +93,15 @@ module PipeLine(
 //		input [2:0] rs_fwd,
 //		input [2:0] rt_fwd,
 //		input [31:0] alu_out_from_mem,
-//		input [31:0] mem_data_from_mem
+//		input [31:0] mem_data_from_mem,
+//		input [2:0] ld_rs_fwd,
+//		input [2:0] ld_rt_fwd
 //    );
      EX _ex(.clk(clk), .imm_in(imm_EX),.val_rs_in(rs_EX), .val_rt_in(rt_EX),
             .val_rt_out(rt_MEM), .rwd_in(rwd_EX), .rwd_out(rwd_MEM), .opcode_in(opcode_EX),
             .opcode_out(opcode_MEM), .alu_res_out(alures_MEM),
 				.rs_fwd(rs_fwd), .rt_fwd(rt_fwd), .alu_out_from_mem(alures_WB),
-				.mem_data_from_mem(memdata_WB) );
+				.mem_data_from_mem(memdata_WB), .ld_rs_fwd(ld_rs_EX), .ld_rt_fwd(ld_rt_EX));
 
 
 //module MEM(

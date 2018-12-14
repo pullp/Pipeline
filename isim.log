@@ -12,9 +12,3 @@ Finished circuit initialization process.
 # run 1.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run all
-Stopped at time : 2498620 ns : File "E:/OneDrive - stu.hit.edu.cn/codes/verilog/PipeLine/ID.v" Line 78
-# restart
-# run 1.00us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.

@@ -10,3 +10,4 @@
 `define XOR  6'b00_0101
 `define SLT  6'b00_0110
 `define JUMP 6'b00_0000
+`define _STALL 6'b11_1111
