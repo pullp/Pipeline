@@ -30,8 +30,7 @@ Compiling module PipeLine
 Compiling module PipeLineTest
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 12 Verilog Units
 Built simulation executable E:/OneDrive - stu.hit.edu.cn/codes/verilog/PipeLine/PipeLineTest_isim_beh.exe
-Fuse Memory Usage: 30464 KB
-Fuse CPU Usage: 781 ms
+Fuse Memory Usage: 30448 KB
+Fuse CPU Usage: 1515 ms
