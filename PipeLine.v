@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 module PipeLine(
     input clk,
-	 output[31:0] pc,
-	 output[31:0] instr,
-	 output[31:0] wb_data,
-	 output[4:0] rwd
+	 output[31:0] g_pc,
+	 output[31:0] g_instr,
+	 output[31:0] g_wb_data,
+	 output[4:0] g_rwd
     );
 
 	wire [31:0] instr_ID;
@@ -36,10 +36,10 @@ module PipeLine(
 	wire [31:0]	wbdata_BACK;
 	wire [31:0] pc_ID ;
 	
-	assign instr = instr_ID;
-	assign wb_data = wbdata_BACK;
-	assign rwd = rwd_BACK;
-	assign pc = pc_ID;
+	assign g_instr = instr_ID;
+	assign g_wb_data = wbdata_BACK;
+	assign g_rwd = rwd_BACK;
+	assign g_pc = pc_ID;
 	
 	
 	wire[2:0] rs_fwd, rt_fwd, ld_rs_ID, ld_rt_ID,ld_rs_EX, ld_rt_EX ;

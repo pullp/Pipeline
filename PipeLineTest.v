@@ -28,18 +28,18 @@ module PipeLineTest;
 	reg clk;
 
 	// Outputs
-	wire [31:0] instr;
-	wire [31:0] wb_data;
-	wire [4:0] rwd;
-	wire [31:0] pc;
+	wire [31:0] g_instr;
+	wire [31:0] g_wb_data;
+	wire [4:0] g_rwd;
+	wire [31:0] g_pc;
 
 	// Instantiate the Unit Under Test (UUT)
 	PipeLine uut (
 		.clk(clk), 
-		.pc(pc), 
-		.instr(instr), 
-		.wb_data(wb_data), 
-		.rwd(rwd)
+		.g_pc(g_pc), 
+		.g_instr(g_instr), 
+		.g_wb_data(g_wb_data), 
+		.g_rwd(g_rwd)
 	);
 
 	initial begin

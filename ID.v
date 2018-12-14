@@ -121,12 +121,14 @@ module ID(
 			rwd_out <= (opcode_l==`_STALL) ? 5'b0_0000 : rwd_out_l;
 			opcode_out <= opcode_l;
 			pprev_rwd <= prev_rwd;
+			// if rwd is R0, don't forward, or may cause error
 			prev_rwd <= ((opcode_l == `SDW)
 								|| (opcode_l == `BEQ)
 								|| (opcode_l == `JUMP)
 								|| (opcode_l == `LDW)
-								|| (opcode_l == `_STALL))?6'b10_0000:
-								{1'b0, rwd_out_l};
+								|| (opcode_l == `_STALL))
+								?6'b10_0000:
+								((rwd_out_l==5'b0_0000)?6'b10_0000:{1'b0, rwd_out_l});
 			rs_fwd <= rs_fwd_l;
 			rt_fwd <= rt_fwd_l;
 			ld_rs_out <= ld_rs_in;

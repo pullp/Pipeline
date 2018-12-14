@@ -72,7 +72,10 @@ module IF(
 		pc_out <= (instr_out[31:26] == `JUMP) ? 0 :
 					stall_l ? pc_out :pc_out+1;
 		ld_pprev_rwd <= ld_prev_rwd;
-		ld_prev_rwd <= (instr_out[31:26] == `LDW)?{1'b0, rwd_out_l}:6'b10_0000;
+		//load to R0 don't modify value in R0, so don't stall and forward
+		ld_prev_rwd <= (instr_out[31:26] == `LDW)?
+							((rwd_out_l==5'b0_000)?6'b10_0000:{1'b0, rwd_out_l})
+							:6'b10_0000;
 		need_stall <= stall_l;
 //		ld_rs <= ld_rs_l;
 //		ld_rt <= ld_rt_l;
